@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact - Datanian</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  @vite(['resources/css/contact.css'])
+
+  <link rel="icon" href="assets/favicon.png" sizes="64x64" type="image/png">
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Owl Carousel CSS and JS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+
+
+  <!-- Bootstrap CSS v5.3.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+  <body> 
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg sticky-top"   aria-label="Offcanvas navbar small" style="border:1px solid rgba(0,0,0,0.2)">
+      <div class="container-fluid">
+        
+       <a class="navbar-brand" href="{{ route('home') }}"> <img src="{{URL('images/datanian.png')}}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header" style=" border:1px solid rgba(0,0,0,0.2)">
+            <a class="navbar-brand" href="{{ route('home') }}"> <img src="{{URL('images/datanian.png')}}" alt=""></a>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="color-scheme:inherit;">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('agriculture') }}">Agriculture</a>
+                </li>
+            
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Other Industries
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('weather') }}">Weather</a></li>
+                        <li><a class="dropdown-item" href="{{ route('aviation') }}">Aviation</a></li>
+                    </ul>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('about') }}">About</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+                    <div class="wsite-section wsite-header-section wsite-section-bg-image wsite-section-effect-reveal" style="height: 750px;">
+                        <div class="container mt-5">
+                            <div class="border" style="border: 1px solid rgba(0,0,0,0.1); padding: 20px;">
+                                <h2 class="form-title" style="padding-bottom: 30px;">Contact <font color="#0ce6aa">Us</font></h2>
+                                <h4 class="form-description" style="font-style: italic; font-size: medium; font-weight: 300; padding-bottom: 10px;"><font color="red">*</font> INDICATES REQUIRED FIELD</h4>
+                                <form class="row g-3" id="contactForm">
+                                    <div class="col-md-4">
+                                        <label for="fname" class="form-label">First Name <font color="red">*</font></label>
+                                        <input type="text" class="form-control" id="fname" required placeholder="John">
+                                    </div>
+                    
+                                    <div class="col-md-4">
+                                        <label for="lname" class="form-label">Last Name <font color="red">*</font></label>
+                                        <input type="text" class="form-control" id="lname" required placeholder="Doe">
+                                    </div>
+                    
+                                    <div class="col-md-8">
+                                        <label for="mail" class="form-label">Email Address <font color="red">*</font></label>
+                                        <input type="email" class="form-control" id="mail" required placeholder="example@gmail.com">
+                                    </div>
+                    
+                                    <div class="col-md-12">
+                                        <label for="inquiry" class="form-label">Inquiries <font color="red">*</font></label>
+                                        <textarea class="form-control" id="inquiry" rows="6" required placeholder="Enter any suggestions inside here" style="resize: none;"></textarea>
+                                    </div> 
+
+                                    <div class="col-md-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="cursor: pointer;">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                I agree to receiving marketing and promotional materials
+                                                </label>
+                                        </div>
+                                    </div>                    
+
+                                        <!-- Modal trigger button -->
+                                        <button type="button" class="btn btn-primary btn-lg col-md-3" data-bs-toggle="modal" id="submit">
+                                          Submit
+                                        </button>
+                                        
+                                        <!-- Modal Body -->
+                                        <!-- If you want to close by clicking outside the modal, delete the last endpoint: data-bs-backdrop and data-bs-keyboard -->
+                                        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="true" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                                          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <h5 class="modal-title" id="modalTitleId">Status</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                Data Sent Successfully! 
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <script>
+                                          document.getElementById('submit').addEventListener('click', function() {
+                                            // Check if all required fields are filled
+                                            var requiredInputs = document.querySelectorAll('[required]');
+                                            var isEmptyField = false;
+                                        
+                                            requiredInputs.forEach(function(input) {
+                                              if (input.value.trim() === '') {
+                                                isEmptyField = true;
+                                                input.classList.add('is-invalid'); // Add a class to highlight empty fields
+                                              } else {
+                                                input.classList.remove('is-invalid');
+                                              }
+                                            });
+                                        
+                                            if (isEmptyField) {
+                                              // If at least one required field is empty, display an alert
+                                              alert('Please fill out all required fields.');
+                                            } else {
+                                              // If all required fields are filled, show the success modal
+                                              const myModal = new bootstrap.Modal(document.getElementById('modalId'));
+                                              myModal.show();
+                                            }
+                                          });
+                                        </script>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+
+
+        
+ 
+
+<!--footer-->
+<div style="background-color: #2e2e2e ">
+  <div class="container" style="color: #0ce6aa;">
+    <footer class="pad" style="padding-bottom: 10px; padding-top:40px;">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="padding-bottom: 20px;">Agriculture</h5>
+          <ul class="nav flex-column">
+               <li class="nav-item mb-2"><a href="agriculture.html" class="nav-link p-0 text-white" >Precision Farming</a></li>
+            <li class="nav-item mb-2"><a href="agriculture.html" class="nav-link p-0 text-white">Agriculture</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="padding-bottom: 20px;">Other Industries</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="weather.html" class="nav-link p-0 text-white">Weather</a></li>
+            <li class="nav-item mb-2"><a href="aviation.html" class="nav-link p-0 text-white">Aviation</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 style="padding-bottom: 20px;">About</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">Vision / Mission</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">Management Team</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">Values</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3 text-white">
+          <form>
+            <h5></h5>
+            <p>Datanian Sdn. Bhd (1500169-T)</p>
+            <p>Suite 3.4, UiTM-MTDC Technopreneur Centre, Universiti Teknologi MARA, 40450, Shah Alam, Malaysia</p>
+            <p>Email: <a href="mailto:sales.dt@datanian.my"  style="color:#0ce6aa; text-decoration:none;">sales.dt@datanian.my</a></p>
+            <p>Phone: +60 (03)-5524 7474</p>
+            <p>Fax: +60 (03)-5524 7373</p>
+
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-2 my-1 border-top text-white">
+        <p>© 2023 Datanian Sdn. Bhd. All rights reserved.</p>
+        <ul class="list-unstyled list-inline">
+          <!--
+          <li class="list-inline-item">
+            <a href="" class="btn-floating" btn-sm text-white style="font-size:23px;"><i class="fab fa-facebook" style="color: #ffffff;"></i></a>
+          </li>
+-->
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/company/dataniansb/" class="btn-floating" btn-sm text-white style="font-size:23px;"><i class="fab fa-linkedin" style="color: #ffffff;"></i></a>
+          </li>
+<!--
+          <li class="list-inline-item">
+            <a href="" class="btn-floating" btn-sm text-white style="font-size:23px;"><i class="fab fa-instagram" style="color: #ffffff;"></i></a>
+          </li>
+-->
+          <li class="list-inline-item">
+            <a href="mailto:sales.dt@datanian.my" class="btn-floating" btn-sm text-white style="font-size:23px;"><i class="fa-solid fa-envelope" style="color:#ffffff"></i></a>
+          </li>
+        </ul>
+      </div>   
+  </div> 
+</div> 
+
+
+        
+        
+</body>
+
+
+
+</html>
